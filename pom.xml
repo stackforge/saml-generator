@@ -32,6 +32,12 @@
 	                </executions>
 	            </configuration>
 	        </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                 <artifactId>maven-compiler-plugin</artifactId>
+		 <version>2.5.1</version>
+            </plugin>
 	        
 	        <!-- Ensure all dependent jars are packaged together -->
 	        <plugin>
@@ -70,7 +76,14 @@
 	</build>
 	
 	<dependencies>
-		<!-- JUnit -->
+        <!-- slf4j -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.7</version>
+        </dependency>
+
+        <!-- JUnit -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
